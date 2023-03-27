@@ -1,0 +1,79 @@
+\documentclass[a4paper]{article} 
+\input{head}
+\usepackage[UTF8]{ctex}
+\newtheorem{theorem}{定理}
+\newtheorem{example}{例}
+\newtheorem{definition}{定义}
+\usepackage{tikz-cd}
+\begin{document}
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+\footnotesize
+姓名：邓志远 \\   
+学号170600302 
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+数学文化 1\\ 
+\normalsize 
+范畴下的乘积\\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{范畴的基本定义}
+范畴被称之为数学的数学。在集合论面对Russell悖论时的虚弱无力，除了提出了公理化体系改造传统的集合论，使之成为在满足一族公理化条件deZermelo–Fraenkel集合论。然后更直接的想法是发展一套不以集合为基础的数学语言：范畴论。一言以蔽之，范畴是由一类对象和对象之间的关系所组成的。
+
+\begin{example}
+     一个不严谨不是数学的例子：假想全体人类组成的范畴，其他对象之间的关系为社交关系。那么如果两个人的社交关系完全一样的情况下，这两个人在社会意义上就是同一个人了。
+\end{example}
+
+\begin{definition}
+类（class）是一类有着严格相同性质的集合（set）（或者其他数学对象）。
+\end{definition}
+\begin{example}
+是类但不是集合（set）的例子：
+\begin{enumerate}
+    \item 所有群组成的全体是类（class），群是一个集合带有满足相应要求运算，但是群的定义中不能确定群中元素；
+    \item 所有单点集的全体，所有固定基数的集合全体。
+\end{enumerate}
+\end{example}
+在给出来了类的概念后，可以给出范畴的定义：
+\begin{definition}
+范畴$\mathfrak{C}$：
+\begin{enumerate}
+    \item 一个类$\mathbf{Ob}(\mathfrak{C})$其中元素称为范畴中的对象，通常记为大写字母$X,Y,...$，且$X\in\mathfrak{C}$即为$X\in\mathbf{Ob}(\mathfrak{C})$；
+    \item 对于任意有序对$X,Y\in\mathfrak{C}$有集合$\mathbf{Hom}(X,Y)$, $\mathbf{Hom}(X,Y)$是对象$X,Y$之家的态射。对于$\phi\in\mathbf{Hom}(X,Y)$,有$\phi:X\rightarrow Y$;
+    \item 对于元素之间的态射应该满足一下条件：
+    \begin{enumerate}
+        \item 态射复合：对于任意三个$X,Y,Z\in\mathfrak{C}$，和其中态射：$\phi:X\rightarrow Y, \psi:Y\rightarrow Z$，则可以得到$X$到$Z$的态射，其称之为$\phi,\psi$的复合态射，记为：$\phi\circ\psi$或者$\phi\psi$；
+        \item 复合的结合律：对于$X,Y,Z,U\in\mathfrak{C}$,有态射：$\phi:X\rightarrow Y,\psi:Y\rightarrow Z, \kappa:Z\rightarrow U$,可以得到：$(\kappa\circ\psi)\circ\phi=\kappa\circ(\phi\circ\psi)$;
+        \item 态射存在恒等态射：对于每一个$X\in\mathfrak{C}$，存在态射：$1_{X}:X\rightarrow X$，这个态射称为局部恒等态射。对于每一个$Y\in\mathfrak{C}$，且$\phi:X\rightarrow Y$,$\psi:Y\rightarrow X$,有复合：$\phi\circ 1_{X}=\phi$,$1_{X}\circ\psi=\psi$。
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+\begin{example}
+定义线性空间范畴$\mathfrak{Lin}$(定义在复空间$\mathcal{C}$上)，其中对象是线性空间，态射是线性空间之间的算子。这范畴有一个重要的满的子范畴：有限维空间范畴：$\mathfrak{FLin}$。
+\end{example}
+\section{范畴下的极限}
+在范畴论中，一个更加抽象的极限定义更关键的把握了数学结构中的泛性质，比如其他结构：乘积，反极限。其对偶的概念：余极限推广很多数学结构，比如余乘积，直和，直极限。
+
+\begin{definition}
+\end{definition}
+
+\end{document}
